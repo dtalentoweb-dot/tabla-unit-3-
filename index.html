@@ -3,117 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Detalles del Commit de GitHub</title>
+<title>Reglas del Adjetivo Comparativo</title>
 <style>
     body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-        background-color: #0d1117; /* Fondo oscuro similar al de GitHub */
+        font-family: Arial, sans-serif;
         padding: 20px;
+        background-color: #f4f4f4;
         display: flex;
         justify-content: center;
     }
 
-    /* Estilo principal de la barra de commit */
-    .commit-bar {
-        background-color: #21262d; /* Color de fondo de la barra en GitHub */
-        color: #c9d1d9; /* Color de texto claro */
-        border: 1px solid #30363d; /* Borde sutil */
-        border-radius: 6px;
-        padding: 10px 16px;
+    .comparison-table {
+        border-collapse: collapse;
         width: 100%;
-        max-width: 800px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        max-width: 600px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .commit-info {
-        display: flex;
-        align-items: center;
-        gap: 12px;
+    .comparison-table th, .comparison-table td {
+        border: 1px solid #c0c0c0; /* Borde gris claro */
+        padding: 12px;
+        text-align: left;
     }
 
-    /* Estilo para el icono del autor */
-    .avatar {
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        background-color: #58a6ff; /* Color de relleno del icono (placeholder) */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 10px;
+    /* Estilo para las celdas de encabezado y reglas (azul oscuro/púrpura) */
+    .comparison-table .header-row th,
+    .comparison-table .rule-row td {
+        background-color: #a9b9e2; /* Color de fondo similar al de la imagen */
+        color: #333;
         font-weight: bold;
+        text-transform: none; /* Mantener la capitalización de la imagen */
+    }
+    
+    /* Estilo para las filas de texto (blanco/gris claro) */
+    .comparison-table .text-row {
+        background-color: #f8f8f8;
     }
 
-    /* Estilo para el mensaje y el autor */
-    .commit-message {
-        font-weight: 500;
-        margin-right: 15px;
+    /* Estilo para las filas de ejemplos (azul pálido) */
+    .comparison-table .example-row {
+        background-color: #e6e9f1;
     }
 
-    /* Estilo para el punto amarillo */
-    .dot {
-        height: 8px;
-        width: 8px;
-        background-color: #f7b03e; /* Color similar al de la imagen */
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 15px;
-    }
-
-    /* Estilo para el hash del commit y el tiempo */
-    .commit-details {
-        font-size: 12px;
-        color: #8b949e; /* Gris más claro */
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .commit-hash, .commit-time {
-        font-family: Consolas, "Liberation Mono", Courier, monospace;
-        color: #58a6ff; /* Azul para el hash */
-    }
-
-    /* Estilo para el conteo de commits */
-    .commit-count {
-        display: flex;
-        align-items: center;
-        font-weight: bold;
-        color: #c9d1d9;
-        font-size: 14px;
-        gap: 5px;
-    }
-
-    /* Icono de reloj (usamos un SVG simple como placeholder) */
-    .commit-count svg {
-        width: 16px;
-        height: 16px;
-        fill: #8b949e;
+    /* Estilo específico para las celdas que contienen texto en español */
+    .comparison-table .spanish-text {
+        font-style: italic;
+        color: #555;
+        display: block;
+        margin-top: 5px;
+        font-size: 0.9em;
     }
 </style>
 </head>
 <body>
 
-<div class="commit-bar">
-    <div class="commit-info">
-        <div class="avatar">D</div>
-        <span class="commit-author">citalentoweb-dot</span>
-        <span class="commit-message">Add files via upload</span>
-        <span class="dot"></span>
-    </div>
-    <div class="commit-details">
-        <span class="commit-hash">fc11ea2</span>
-        <span class="commit-time">· 1 minute ago</span>
-        <div class="commit-count">
-            <svg viewBox="0 0 16 16" version="1.1" aria-hidden="true">
-                <path d="M1.643 3.143L.427 1.927A1.5 1.5 0 0 1 2.5 0h11A1.5 1.5 0 0 1 15.5 1.5v11c0 .667-.625 1.167-1.25 1.25V16l-3-2-3 2-3-2-3 2V14c-.625-.083-1.25-.583-1.25-1.25V1.5c0-.422.106-.772.327-1.073L1.643 3.143zM3.5 3h10v10l1.25.083c.094.012.167.094.167.188V13.5c0 .276-.224.5-.5.5h-11a.5.5 0 0 1-.5-.5V1.5c0-.276.224-.5.5-.5h10V3z"></path>
-            </svg>
-            <span>2 Commits</span>
-        </div>
-    </div>
-</div>
+<table class="comparison-table">
+    <thead>
+        <tr class="header-row">
+            <th>Short</th>
+            <th>Long</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="text-row">
+            <td>One-syllable words <span class="spanish-text">Palabras de una sílaba</span></td>
+            <td>Words with more than two syllables</td>
+        </tr>
+        <tr class="text-row">
+            <td>Two-syllable words ending in “-y” <span class="spanish-text">Palabras de dos sílabas</span></td>
+            <td>Two-syllable words NOT ending in “-y”</td>
+        </tr>
+        <tr class="rule-row">
+            <td>Rule</td>
+            <td>Rule</td>
+        </tr>
+        <tr class="text-row">
+            <td>We add “-er” to the adjective</td>
+            <td>We put the word “more” before the adjective</td>
+        </tr>
+        <tr class="rule-row">
+            <td>Examples</td>
+            <td>Examples</td>
+        </tr>
+        <tr class="example-row">
+            <td>Hard—harder</td>
+            <td>Intelligent—more intelligent</td>
+        </tr>
+        <tr class="example-row">
+            <td>Small—smaller</td>
+            <td>Expensive—more expensive</td>
+        </tr>
+    </tbody>
+</table>
 
 </body>
 </html>
