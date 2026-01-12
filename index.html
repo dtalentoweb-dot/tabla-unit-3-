@@ -24,6 +24,7 @@
         border: 1px solid #c0c0c0; /* Borde gris claro */
         padding: 12px;
         text-align: left;
+        vertical-align: top; /* Alineación arriba para que queden parejos */
     }
 
     /* Estilo para las celdas de encabezado y reglas (azul oscuro/púrpura) */
@@ -32,7 +33,7 @@
         background-color: #a9b9e2; /* Color de fondo similar al de la imagen */
         color: #333;
         font-weight: bold;
-        text-transform: none; /* Mantener la capitalización de la imagen */
+        text-transform: none;
     }
     
     /* Estilo para las filas de texto (blanco/gris claro) */
@@ -52,6 +53,7 @@
         display: block;
         margin-top: 5px;
         font-size: 0.9em;
+        font-weight: normal; /* Para quitar negrita en las cabeceras si se hereda */
     }
 </style>
 </head>
@@ -60,38 +62,38 @@
 <table class="comparison-table">
     <thead>
         <tr class="header-row">
-            <th>Short</th>
-            <th>Long</th>
+            <th>Short <span class="spanish-text">Cortos</span></th>
+            <th>Long <span class="spanish-text">Largos</span></th>
         </tr>
     </thead>
     <tbody>
         <tr class="text-row">
             <td>One-syllable words <span class="spanish-text">Palabras de una sílaba</span></td>
-            <td>Words with more than two syllables</td>
+            <td>Words with more than two syllables <span class="spanish-text">Palabras de más de dos sílabas</span></td>
         </tr>
         <tr class="text-row">
-            <td>Two-syllable words ending in “-y” <span class="spanish-text">Palabras de dos sílabas</span></td>
-            <td>Two-syllable words NOT ending in “-y”</td>
+            <td>Two-syllable words ending in “-y” <span class="spanish-text">Palabras de dos sílabas terminadas en “-y”</span></td>
+            <td>Two-syllable words NOT ending in “-y” <span class="spanish-text">Palabras de dos sílabas NO terminadas en “-y”</span></td>
         </tr>
         <tr class="rule-row">
-            <td>Rule</td>
-            <td>Rule</td>
+            <td>Rule <span class="spanish-text">Regla</span></td>
+            <td>Rule <span class="spanish-text">Regla</span></td>
         </tr>
         <tr class="text-row">
-            <td>We add “-er” to the adjective</td>
-            <td>We put the word “more” before the adjective</td>
+            <td>We add “-er” to the adjective <span class="spanish-text">Añadimos “-er” al adjetivo</span></td>
+            <td>We put the word “more” before the adjective <span class="spanish-text">Ponemos la palabra “more” antes del adjetivo</span></td>
         </tr>
         <tr class="rule-row">
-            <td>Examples</td>
-            <td>Examples</td>
+            <td>Examples <span class="spanish-text">Ejemplos</span></td>
+            <td>Examples <span class="spanish-text">Ejemplos</span></td>
         </tr>
         <tr class="example-row">
-            <td>Hard—harder</td>
-            <td>Intelligent—more intelligent</td>
+            <td>Hard—harder <span class="spanish-text">Duro—más duro</span></td>
+            <td>Intelligent—more intelligent <span class="spanish-text">Inteligente—más inteligente</span></td>
         </tr>
         <tr class="example-row">
-            <td>Small—smaller</td>
-            <td>Expensive—more expensive</td>
+            <td>Small—smaller <span class="spanish-text">Pequeño—más pequeño</span></td>
+            <td>Expensive—more expensive <span class="spanish-text">Caro—más caro</span></td>
         </tr>
     </tbody>
 </table>
